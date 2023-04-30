@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="../css/Product.css">
+</head>
+<body>
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong style="color: brown;"><a href="main.html">Product</a></strong>
+            <p>Find what you want, and trade it!</p>
+        </div>
+        <div class="board_write_wrap">
+            <div class="board_write">
+                <div class="title">
+                    <dl>
+                        <dt>Title</dt>
+                        <dd><input type="text" placeholder="Write the title" value="WebPrograming"></dd>
+                    </dl>
+                </div>
+                <div class="info">
+                    <dl>
+                        <dt>Writer</dt>
+                        <dd><input type="text" placeholder="Write your name" value="Hyeok"></dd>
+                    </dl>
+                    <dl>
+                        <dt>Sales completed</dt>
+                        <dd><input type="checkbox"></dd>
+                    </dl>
+                </div>
+                <div id="dropzone">
+                    <form action="https://httpbin.org/post" class="dropzone needsclick" id="demo-upload">
+                    <div class="dz-message needsclick">
+                        <span class="text">
+                        <img src="http://www.freeiconspng.com/uploads/------------------------------iconpngm--22.png" alt="Camera" />
+                        Drop files here or click to upload.
+                        </span>
+                        <span class="plus">+</span>
+                    </div>
+                    </form>
+                </div>
+                
+                <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+                
+                <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css" />
+                <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+                <div class="cont">
+                    <textarea placeholder="Write">
+content
+may be picture
+or the information
+about the goods
+First thing I have to do is
+I have to add
+the function of adding picture
+                    </textarea>
+                </div>
+            </div>
+            <div class="bt_wrap">
+                <a href="view.html" class="on">Confirm</a>
+                <a href="view.html">Cancel</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
