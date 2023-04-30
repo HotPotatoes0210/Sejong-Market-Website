@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: RGB(155, 35, 53);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+body {
+  margin: 150px;
+  padding: 0;
+  background: RGB(223, 207, 190);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.logo {
+  font-size: 3em;
+  color: RGB(223, 207, 190);
+  user-select: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: RGB(223, 207, 190);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 80px;
+  height: 3px;
+  background: RGB(223, 207, 190);
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid RGB(223, 207, 190);
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: RGB(223, 207, 190);
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation .btnLogin-popup:hover {
+  background: RGB(223, 207, 190);
+  color: RGB(155, 35, 53);
+}
+
+.product {
+  position: relative;
+  max-width: 1000px auto;
+  height: 440px;
+  background: RGB(155, 35, 53);
+  border: 2px solid rgb(red, green, blue);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.product h2 {
+  letter-spacing: 2px;
+  font-size: 2em;
+  color: RGB(223, 207, 190);
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.content {
+  margin: 10% auto;
+  padding: 0;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  height: 500px;
+  width: 1000px;
+  overflow: hidden;
+  border: 1px saddlebrown solid;
+  box-shadow: 20px hsl(0, 0%, 3%);
+  z-index: -1;
+}
+.show {
+  padding: 10%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  width: fit-content;
+}
+
+.slide_content {
+  width: 1000px;
+  height: 500px;
+}
+.slides {
+  width: 5000px;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide_content:nth-child(1) {
+  background: rgb(247, 173, 210);
+  z-index: 1;
+}
+
+.slide_content:nth-child(2) {
+  background: hsl(108, 100%, 88%);
+}
+
+.slide_content:nth-child(3) {
+  background: rgb(226, 192, 192);
+}
+
+.slide_content:nth-child(4) {
+  background: rgb(236, 236, 149);
+}
+.slide_content:nth-child(5) {
+  background: rgb(236, 236, 149);
+}
+
+@keyframes slide {
+  10% {
+    margin-left: 0px;
+  }
+
+  20% {
+    margin-left: calc(-1000px * 1);
+  }
+
+  30% {
+    margin-left: calc(-1000px * 2);
+  }
+
+  40% {
+    margin-left: calc(-1000px * 3);
+  }
+  50% {
+    margin-left: calc(-1000px * 4);
+  }
+}
+.para {
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  font-size: 60px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: RGB(155, 35, 53);
+  text-shadow: 20px hsl(0, 0%, 3%);
+}
+.buynow input[type="submit"] {
+  border: none;
+  outline: none;
+  width: 350px;
+  height: 80px;
+  background: RGB(155, 35, 53);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.buynow input[type="submit"]:hover {
+  cursor: pointer;
+  background: RGB(223, 207, 190);
+  border-radius: 20px;
+  border: RGB(155, 35, 53) solid;
+  color: RGB(155, 35, 53);
+}
+.wrapper {
+  left: 40%;
+  position: fixed;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background-color: RGB(223, 207, 190);
+  box-shadow: 0 0 30px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+.wrapper .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translate(0);
+}
+.wrapper.active.form-box.login {
+  transition: none;
+  transform: translate(1);
+}
+.wrapper.active-popup {
+  transform: scale(1);
+}
+.wrapper.active {
+  height: 520px;
+}
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+.form-box h2 {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid black;
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: black;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+.remember-forgot {
+  font-size: 0.9em;
+  color: black;
+  font-weight: 500;
+  margin: -15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input {
+  accent-color: #162938;
+  margin-right: 3px;
+}
+.remember-forgot a {
+  color: black;
+  text-decoration: none;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+.btn {
+  width: 100%;
+  height: 45px;
+  background: RGB(155, 35, 53);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+}
+.login-register {
+  font-size: 0.9em;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.login-register p a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-register p a:hover {
+  text-decoration: underline;
+}
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background: RGB(155, 35, 53);
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.Alam {
+  background-color: RGB(155, 35, 53);
+  padding: 20px;
+  border-radius: 10px;
+  color: RGB(223, 207, 190);
+  font-size: 1.2em;
+  margin-bottom: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.Alam input[type="email"],
+.Alam button[type="submit"] {
+  padding: 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  width: 200px;
+}
+
+.Alam button[type="submit"] {
+  background-color:  RGB(223, 207, 190);
+  color: RGB(155, 35, 53);
+  cursor: pointer;
+}
